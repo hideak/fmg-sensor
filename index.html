@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <title>FMG Sensor</title>
 </head>
-
 <body>
-
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
 <header>
     <h1>FMG Sensor</h1>
 </header>
-
 <main>
     <p>
         Este é um webapp simples desenvolvido para testar
         a API web de acesso à câmera em um smartphone, bem como a
         verificar se é possível acessar a imagem em um canvas.
     </p>
-
-    <div>
-        <button id="startMeasuring">Iniciar Medições</button>
-    </div>
-    <div>
-        <video id="video" width="300" height="300" autoplay></video>
-    </div>
+    <div><p id="neuralResult">Carregando Rede Neural...</p></div>
+    <div><button id="startMeasuring">Iniciar Medições</button></div>
+    <div><video id="video" width="300" height="300" autoplay></video></div>
+    <div><canvas id="canvas" width="300" height="300"></canvas></div>
 </main>
-
 <script src="script.js"></script>
-
 </body>
 </html>
