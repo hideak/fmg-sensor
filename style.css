@@ -9,7 +9,8 @@ header {
     text-align: center;
     font-size: 10px;
     height: 50px;
-    background-color: lightblue;
+    background-color: #5692c8;
+    color: white;
     line-height: 50px;
 }
 
@@ -24,4 +25,8 @@ p {
 button {
     width: 150px;
     height: 50px;
+}
+
+video {
+    margin: 10px;
 }
