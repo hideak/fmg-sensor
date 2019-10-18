@@ -3,6 +3,11 @@ const canvas = document.getElementById('canvas');
 const neuralResult = document.getElementById('neuralResult')
 const context = canvas.getContext('2d');
 
+// Function to draw video to canvas
+function drawVideo() {
+    context.drawImage(video, 0, 0, 300, 300);
+}
+
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
         video.srcObject = stream;
@@ -24,3 +29,5 @@ model.fit(xs, ys, {epochs: 10}).then(() => {
     let result = model.predict(tf.tensor2d([5], [1, 1]));
     neuralResult.innerHTML = result;
 });
+
+setInterval(drawVideo, 1000);
